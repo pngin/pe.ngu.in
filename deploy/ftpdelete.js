@@ -3,7 +3,7 @@ const path = require('path');
 
 var ftp = new JSFtp({
   host: process.env.ftp_host,
-  port: 21,
+  port: process.env.port,
   user: process.env.ftp_user,
   pass: process.env.ftp_password
 });

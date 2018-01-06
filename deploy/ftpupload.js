@@ -1,7 +1,6 @@
 var fs = require('fs');
 var FtpClient = require('ftp-deploy');
 
-console.log("Inside ftpUpload.js");
 if (process === null) {
   console.log("process is null");
 } else {
@@ -43,7 +42,7 @@ function uploadToFTP(files) {
 function getConfiguration() {
   return {
     host: process.env.ftp_host,
-    port: 21,
+    port: process.env.port,
     username: process.env.ftp_user,
     password: process.env.ftp_password,
     localRoot: process.env.ftp_localPath,
