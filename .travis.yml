@@ -1,10 +1,4 @@
-install:
-  - 'git clone https://github.com/git-ftp/git-ftp.git'
-  - 'cd git-ftp'
-  - 'git checkout 1.1.0'
-  - 'sudo make install'
-script:
-  - 'git clone https://github.com/compwj/travis-ci-deploy-ftp.git'
-  - 'dir'
-  - 'cd travis-ci-deploy-ftp'
-  - 'git ftp push --user ${user} --passwd ${sn} ftp://ftp.ngu.in/pe'
+language: node_js
+node_js:
+  - "stable"
+  
