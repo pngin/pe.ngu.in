@@ -2,23 +2,11 @@
   "name": "pe.ngu.in",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "postinstall": "node deploy/ftpdelete.js ; node deploy/ftpupload.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pngin/pe.ngu.in.git"
-  },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/pngin/pe.ngu.in/issues"
+  "scripts": {
+    "deploy": "node deploy/ftpdelete.js ; node deploy/ftpupload.js"
   },
-  "homepage": "https://github.com/pngin/pe.ngu.in#readme",
   "devDependencies": {
-    "ftp-deploy": "^1.2.2",
-    "jsftp": "^2.1.2"
+    "ftp-deploy": "^1.2.2"
   }
 }
