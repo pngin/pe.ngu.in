@@ -1,5 +1,7 @@
-language: node_js
-node_js:
-  - "4.6"
-after_success:
-    "curl --ftp-create-dirs -T uploadfilename -u ${user}:${sn} ftp://ftp.ngu.in/pe"
+install:
+  - 'git clone https://github.com/git-ftp/git-ftp.git'
+  - 'cd git-ftp'
+  - 'git checkout 1.1.0'
+  - 'sudo make install'
+script:
+- 'git ftp push --user ${user} --passwd ${sn} ftp://ftp.ngu.in/pe'
