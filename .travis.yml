@@ -1,6 +1,2 @@
-env:
-  global:
-    - "FTP_USER=${user}"
-    - "FTP_PASSWORD=${sn}"
 after_success:
-    "curl --ftp-create-dirs -T uploadfilename -u $FTP_USER:$FTP_PASSWORD ftp://ftp.ngu.in/pe"
+    "curl --ftp-create-dirs -T uploadfilename -u ${user}:${sn} ftp://ftp.ngu.in/pe"
