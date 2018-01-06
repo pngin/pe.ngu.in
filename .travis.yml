@@ -4,4 +4,7 @@ install:
   - 'git checkout 1.1.0'
   - 'sudo make install'
 script:
-- 'git ftp push --user ${user} --passwd ${sn} ftp://ftp.ngu.in/pe'
+  - 'git clone https://github.com/compwj/travis-ci-deploy-ftp.git'
+  - 'dir'
+  - 'cd travis-ci-deploy-ftp'
+  - 'git ftp push --user ${user} --passwd ${sn} ftp://ftp.ngu.in/pe'
