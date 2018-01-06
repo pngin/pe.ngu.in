@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "node deploy/ftpupload.js"
+    "postinstall": "node deploy/ftpdelete.js ; node deploy/ftpupload.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/pngin/pe.ngu.in#readme",
   "devDependencies": {
-    "ftp-deploy": "^1.2.2"
+    "ftp-deploy": "^1.2.2",
+    "jsftp": "^2.1.2"
   }
 }
